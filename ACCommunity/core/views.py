@@ -1,4 +1,4 @@
-# for home view and info view
+# for home view and info  view
 from flask import render_template, request, Blueprint
 
 core = Blueprint("core", __name__)
