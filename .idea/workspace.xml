@@ -2,32 +2,67 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55feb30d-ce97-489f-9d70-addc4c3b975a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ACCommunity/data.sqlite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ACCommunity/db_items/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ACCommunity/db_items/picture_handler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ACCommunity/db_items/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ACCommunity/static/profile_pics/default_profile.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ACCommunity/static/villager_pics/default_profile.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ACCommunity/templates/account.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ACCommunity/templates/add_villager.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ACCommunity/templates/edit_villager.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ACCommunity/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ACCommunity/templates/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ACCommunity/templates/user_blog_posts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ACCommunity/templates/user_turnip_posts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ACCommunity/templates/villager_info.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ACCommunity/users/picture_handler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/README" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/alembic.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/env.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/script.py.mako" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/versions/a3a651314002_first_migration.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ACCommunity/core/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ACCommunity/core/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ACCommunity/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ACCommunity/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ACCommunity/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ACCommunity/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ACCommunity/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/ACCommunity/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ACCommunity/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/ACCommunity/users/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ACCommunity/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ACCommunity/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1ckMueqJasmTKUAxY5hAEzpqrri" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ACCommunity" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ACCommunity/static/villager_pics" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ACCommunity/static/villager_pics" />
       <recent name="$PROJECT_DIR$/ACCommunity" />
       <recent name="$PROJECT_DIR$/ACCommunity/static" />
       <recent name="$PROJECT_DIR$/ACCommunity/templates" />
@@ -72,40 +107,47 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1591068361953</updated>
-      <workItem from="1591068364651" duration="4048000" />
+      <workItem from="1591068364651" duration="20548000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="634" y="314" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1591069606109">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="634" y="314" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1792.1120/0.-1440.2560.1440@0.0.1792.1120" timestamp="1591069606109" />
-    <state width="1750" height="318" key="GridCell.Tab.0.bottom" timestamp="1591137717641">
+    <state width="1750" height="318" key="GridCell.Tab.0.bottom" timestamp="1591221999652">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="318" key="GridCell.Tab.0.bottom/0.0.1792.1120/0.-1440.2560.1440@0.0.1792.1120" timestamp="1591137717641" />
-    <state width="1750" height="318" key="GridCell.Tab.0.center" timestamp="1591137717640">
+    <state width="1750" height="318" key="GridCell.Tab.0.bottom/0.0.1792.1120/0.-1440.2560.1440@0.0.1792.1120" timestamp="1591221999652" />
+    <state width="1750" height="318" key="GridCell.Tab.0.center" timestamp="1591221999650">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="318" key="GridCell.Tab.0.center/0.0.1792.1120/0.-1440.2560.1440@0.0.1792.1120" timestamp="1591137717640" />
-    <state width="1750" height="318" key="GridCell.Tab.0.left" timestamp="1591137717638">
+    <state width="1750" height="318" key="GridCell.Tab.0.center/0.0.1792.1120/0.-1440.2560.1440@0.0.1792.1120" timestamp="1591221999650" />
+    <state width="1750" height="318" key="GridCell.Tab.0.left" timestamp="1591221999650">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="318" key="GridCell.Tab.0.left/0.0.1792.1120/0.-1440.2560.1440@0.0.1792.1120" timestamp="1591137717638" />
-    <state width="1750" height="318" key="GridCell.Tab.0.right" timestamp="1591137717640">
+    <state width="1750" height="318" key="GridCell.Tab.0.left/0.0.1792.1120/0.-1440.2560.1440@0.0.1792.1120" timestamp="1591221999650" />
+    <state width="1750" height="318" key="GridCell.Tab.0.right" timestamp="1591221999651">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="318" key="GridCell.Tab.0.right/0.0.1792.1120/0.-1440.2560.1440@0.0.1792.1120" timestamp="1591137717640" />
+    <state width="1750" height="318" key="GridCell.Tab.0.right/0.0.1792.1120/0.-1440.2560.1440@0.0.1792.1120" timestamp="1591221999651" />
     <state x="397" y="199" key="SettingsEditor" timestamp="1591068376676">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="397" y="199" key="SettingsEditor/0.0.1792.1120/0.-1440.2560.1440@0.0.1792.1120" timestamp="1591068376676" />
+    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1591154414414">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120/0.-1440.2560.1440@0.0.1792.1120" timestamp="1591154414414" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/AnimalCrossingProject$app.coverage" NAME="app Coverage Results" MODIFIED="1591137076880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AnimalCrossingProject$app.coverage" NAME="app Coverage Results" MODIFIED="1591221999642" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+    <div class="jumbotron">
+        <div align="center">
+            <h1>Welcome to the page for {{ user.username }}'s turnip posts</h1>
+            <img src="{{ url_for('static', filename='profile_pics/'+user.profile_image) }}">
+        </div>
+    </div>
+
+    {% for post in turnip_posts.items %}
+
+    <h2><a href="{{ url_for('turnip_posts.turnip_post', turnip_post_id=post.id) }}">{{ post.island_name }}</a></h2>
+    Created By: <a href="{{ url_for('users.user_posts', username=post.host.username) }}">{{ post.host.username }}</a>
+    <p class="text-muted">Published on: {{ post.date.strftime("%Y-%m-%d") }}</p>
+    <br>
+    <p>Turnip Price: {{post.turnip_price}}</p>
+    <br>
+    <p>Comments: {{ post.text }}</p>
+    <br>
+    <p>Island Code: {{post.island_code}}</p>
+
+    {% endfor %}
+
+</div>
+
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+        {% for page_num in turnip_posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+        {% if turnip_posts.page == page_num %}
+        <li class="page-item disabled">
+            <a class="page-link"
+                href="{{ url_for('users.user_turnip_posts', username=user.username, page=page_num) }}">{{ page_num }}</a>
+        </li>
+        {% else %}
+        <li class="page-item">
+            <a class="page-link"
+                href="{{ url_for('users.user_turnip_posts', username=user.username, page=page_num) }}">{{ page_num }}</a>
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</nav>
+
+{% endblock content %}

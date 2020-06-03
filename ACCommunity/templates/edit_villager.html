@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="jumbotron">
+    <div align="center">
+        <h1>Fill out the form below to edit {{villager.name}}'s information</h1>
+        <img align="center" src="{{ url_for('static', filename='villager_pics/'+villager.image) }}">
+    </div>
+</div>
+
+<div class="container">
+    <form method="POST" action="" enctype="multipart/form-data">
+        {{form.hidden_tag()}}
+        <div class="form-group">
+            {{form.name.label(class='form-group')}}
+            {{form.name(class='form-control')}}
+        </div>
+        <div class="form-group">
+            {{form.personality.label(class='form-group')}}
+            {{form.personality(class='form-control')}}
+        </div>
+        <div class="form-group">
+            {{form.species.label(class='form-group')}}
+            {{form.species(class='form-control')}}
+        </div>
+        <div class="form-group">
+            {{form.birthday.label(class='form-group')}}
+            {{form.birthday(class='form-control')}}
+        </div>
+        <div class="form-group">
+            {{form.picture.label(class='form-group')}}
+            {{form.picture(class='form-control')}}
+        </div>
+        <div class="form-group">
+            {{form.submit(class='btn btn-primary')}}
+        </div>
+    </form>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="jumbotron">
+        <div align="center">
+            <h1>Welcome to the page for {{villager.name}}!</h1>
+            <img src="{{ url_for('static', filename='villager_pics/'+villager.image) }}">
+        </div>
+    </div>
+
+    <p>Name: {{villager.name}}</p>
+    <br>
+    <p>Personality: {{villager.personality}}</p>
+    <br>
+    <p>Species: {{villager.species}}</p>
+    <br>
+    <p>Birthday: {{villager.birthday}}</p>
+
+</div>
+{% endblock content %}
