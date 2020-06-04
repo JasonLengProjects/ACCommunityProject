@@ -3,6 +3,7 @@
 # 2. add profile image to posts
 # 3. implement queue function for showing island codes
 # 4. create link for showing turnip posts
+# 5. make all the html templates which direct to users.user_posts to a separate user page that shows both kinds of posts
 from flask import render_template, url_for, flash, redirect, request, Blueprint
 from flask_login import login_user, current_user, logout_user, login_required
 from ACCommunity import db
