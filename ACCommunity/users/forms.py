@@ -2,8 +2,8 @@
 # 1. add validation error in html template (check lecture 110 Q&A)
 # 2. add validation error for villager forms
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField
-from wtforms.validators import DataRequired, Email, EqualTo
+from wtforms import StringField, PasswordField, SubmitField, BooleanField
+from wtforms.validators import DataRequired, Email, EqualTo, InputRequired
 from wtforms import ValidationError
 from flask_wtf.file import FileField, FileAllowed
 
@@ -23,6 +23,7 @@ class RegistrationForm(FlaskForm):
     password = PasswordField("Password", validators=[DataRequired(),
                                                      EqualTo("password_confirm", message="Passwords Must Math")])
     password_confirm = PasswordField("Confirm Password", validators=[DataRequired()])
+    checkbox = BooleanField("I'm not a robot", validators=[InputRequired()])
     submit = SubmitField("Register!")
 
     def validate_email(self, field):

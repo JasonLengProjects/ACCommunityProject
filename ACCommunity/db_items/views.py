@@ -31,7 +31,7 @@ def add_villager():
         flash("Villager added!")
         return redirect(url_for("villagers.villager_info", villager_name=villager.name))
 
-    return render_template("add_villager.html", form=form)
+    return render_template("add_villager.html", form=form, page_title="ADD VILLAGER")
 
 
 # single villager view
@@ -39,7 +39,7 @@ def add_villager():
 def villager_info(villager_name):
     villager = Villager.query.filter_by(name=villager_name).first_or_404()
 
-    return render_template("villager_info.html", villager=villager)
+    return render_template("villager_info.html", villager=villager, page_title=villager.name.upper())
 
 
 # edit villager
@@ -51,7 +51,7 @@ def edit_villager(villager_name):
     if form.validate_on_submit():
         if villager_name != form.name.data and Villager.query.filter_by(name=form.name.data):
             flash("Villager with same name added already!", "error")
-            return render_template("edit_villager.html", villager=villager, form=form)
+            return render_template("edit_villager.html", villager=villager, form=form, page_title=villager.name.upper())
 
         if form.picture.data:
             pic = add_profile_pic(form.picture.data, villager.name)
@@ -73,7 +73,7 @@ def edit_villager(villager_name):
         form.species.data = villager.species
         form.birthday.data = villager.birthday
 
-    return render_template("edit_villager.html", villager=villager, form=form)
+    return render_template("edit_villager.html", villager=villager, form=form, page_title=villager.name.upper())
 
 
 # delete villager
@@ -97,7 +97,7 @@ def delete_villager(villager_name):
 def all_villagers():
     page = request.args.get("page", 1, type=int)
     all_villagers_found = Villager.query.order_by(Villager.name).paginate(page=page, per_page=5)
-    return render_template("all_villagers.html", all_villagers=all_villagers_found)
+    return render_template("all_villagers.html", all_villagers=all_villagers_found, page_title="ALL VILLAGERS")
 
 
 

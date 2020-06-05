@@ -1,9 +1,9 @@
 # To-do
 # 1. DONE! change the redirect of create post view and delete post view to post list view
 # 2. add pictures to create post view (need to change db model and form)
-# 3. Add titles to templates
+# 3. DONE! Add titles to templates
 # 4. DONE! add profile image next to each post
-# 5. make usernames in posts clickable
+# 5. DONE! make usernames in posts clickable
 from flask import render_template, redirect, url_for, flash, request, Blueprint
 from flask_login import current_user, login_required
 from ACCommunity import db
@@ -30,14 +30,14 @@ def create_post():
         flash("Post created!")
         return redirect(url_for("blog_posts.all_posts"))
 
-    return render_template("create_post.html", form=form)
+    return render_template("create_post.html", form=form, page_title="CREATE POST")
 
 
 # view single post
 @blog_posts.route("/<int:blog_post_id>")
 def blog_post(blog_post_id):
     blog_post_found = BlogPost.query.get_or_404(blog_post_id)
-    return render_template("blog_post.html", post=blog_post_found)
+    return render_template("blog_post.html", post=blog_post_found, page_title=blog_post_found.title.upper())
 
 
 # update post
@@ -63,7 +63,7 @@ def update(blog_post_id):
         form.title.data = blog_post_found.title
         form.text.data = blog_post_found.text
 
-    return render_template("create_post.html", form=form)
+    return render_template("create_post.html", form=form, page_title=blog_post_found.title.upper())
 
 
 # delete post
@@ -87,6 +87,6 @@ def delete_post(blog_post_id):
 def all_posts():
     page = request.args.get("page", 1, type=int)
     all_posts_found = BlogPost.query.order_by(BlogPost.date.desc()).paginate(page=page, per_page=5)
-    return render_template("all_posts.html", all_posts=all_posts_found)
+    return render_template("all_posts.html", all_posts=all_posts_found, page_title="ALL POSTS")
 
 

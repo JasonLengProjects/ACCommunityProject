@@ -1,6 +1,3 @@
-# To-do
-# 1. add functionality to queue for island code
-# 2. make usernames  and images in posts clickable
 from flask import render_template, url_for, flash, request, redirect, Blueprint
 from flask_login import current_user, login_required
 from ACCommunity import db
@@ -30,14 +27,14 @@ def create_post():
         flash("Turnip Post Created!")
         return redirect(url_for("turnip_posts.all_posts"))
 
-    return render_template("create_turnip_post.html", form=form)
+    return render_template("create_turnip_post.html", form=form, page_title="CREATE POST")
 
 
 # view single post
 @turnip_posts.route("/<int:turnip_post_id>")
 def turnip_post(turnip_post_id):
     turnip_post_found = TurnipPost.query.get_or_404(turnip_post_id)
-    return render_template("turnip_post.html", post=turnip_post_found)
+    return render_template("turnip_post.html", post=turnip_post_found, page_title="ISLAND-"+turnip_post_found.island_name)
 
 
 # update post
@@ -67,7 +64,7 @@ def update(turnip_post_id):
         form.island_code.data = turnip_post_found.island_code
         form.island_name.data = turnip_post_found.island_name
 
-    return render_template("create_turnip_post.html", form=form)
+    return render_template("create_turnip_post.html", form=form, page_title="UPDATE")
 
 
 # delete post
@@ -91,6 +88,6 @@ def delete_post(turnip_post_id):
 def all_posts():
     page = request.args.get("page", 1, type=int)
     all_posts_found = TurnipPost.query.order_by(TurnipPost.date.desc()).paginate(page=page, per_page=5)
-    return render_template("all_turnip_posts.html", all_posts=all_posts_found)
+    return render_template("all_turnip_posts.html", all_posts=all_posts_found, page_title="ALL POSTS")
 
 

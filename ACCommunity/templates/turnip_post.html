@@ -4,9 +4,11 @@
 
 <div class="jumbotron">
     <div class="media">
-        <img src="{{ url_for('static', filename='profile_pics/'+post.host.profile_image) }}" class="mr-3" alt="">
+        <a href="{{url_for('users.user_turnip_posts', username=post.host.username)}}">
+            <img src="{{ url_for('static', filename='profile_pics/'+post.host.profile_image) }}" class="mr-3" alt="">
+        </a>
         <div class="media-body">
-            <h5 class="mt-0">Written by: {{ post.host.username }}</h5>
+            <h5 class="mt-0">Island Owner: <a href="{{url_for('users.user_posts', username=post.host.username)}}">{{ post.host.username }}</a></h5>
             <h5 class="mt-0">Island Name: {{ post.island_name }}</h5>
             <h6>Published: {{ post.date.strftime('%B %d, %Y') }}</h6>
             <h6>Price on Island: {{post.turnip_price}}</h6>
@@ -20,7 +22,8 @@
     {% if post.host == current_user %}
 
     <div>
-        <a class="btn btn-primary" role="button" href="{{ url_for('turnip_posts.update', turnip_post_id=post.id) }}">Update</a>
+        <a class="btn btn-primary" role="button"
+            href="{{ url_for('turnip_posts.update', turnip_post_id=post.id) }}">Update</a>
         <br>
         <br>
         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#del_modal">Delete</button>

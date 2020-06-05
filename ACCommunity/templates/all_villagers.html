@@ -12,14 +12,19 @@
     <div class="card mb-3" style="max-width: 540px;">
         <div class="row no-gutters">
             <div class="col-md-4">
-                <img src="{{ url_for('static', filename='villager_pics/'+villager.image) }}" class="card-img" alt="">
+                <a href="{{url_for('villagers.villager_info', villager_name=villager.name)}}">
+                    <img src="{{ url_for('static', filename='villager_pics/'+villager.image) }}" class="card-img"
+                        alt="">
+                </a>
             </div>
             <div class="col-md-8">
                 <div class="card-body">
-                    <h5 class="card-title"><a href="{{url_for('villagers.villager_info', villager_name=villager.name)}}">Name:        {{villager.name}}</a></h5>
-                    <h6 class="card-title">Species:     {{villager.species}}</h6>
+                    <h5 class="card-title"><a
+                            href="{{url_for('villagers.villager_info', villager_name=villager.name)}}">Name:
+                            {{villager.name}}</a></h5>
+                    <h6 class="card-title">Species: {{villager.species}}</h6>
                     <h6 class="card-title">Personality: {{villager.personality}}</h6>
-                    <h6 class="card-title">Birthday:    {{villager.birthday}}</h6>
+                    <h6 class="card-title">Birthday: {{villager.birthday}}</h6>
                 </div>
             </div>
         </div>

@@ -2,33 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55feb30d-ce97-489f-9d70-addc4c3b975a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ACCommunity/static/profile_pics/One_edit.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ACCommunity/static/profile_pics/One_edit.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ACCommunity/static/profile_pics/One_edit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ACCommunity/static/profile_pics/Three.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ACCommunity/static/villager_pics/Admiral.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ACCommunity/static/villager_pics/Admiral.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ACCommunity/static/villager_pics/Bam.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ACCommunity/templates/all_turnip_posts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ACCommunity/templates/all_villagers.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ACCommunity/templates/create_turnip_post.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ACCommunity/templates/turnip_post.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ACCommunity/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ACCommunity/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ACCommunity/blog_posts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ACCommunity/blog_posts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ACCommunity/data.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/ACCommunity/data.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ACCommunity/db_items/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/ACCommunity/db_items/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ACCommunity/db_items/picture_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/ACCommunity/db_items/picture_handler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ACCommunity/core/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ACCommunity/core/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ACCommunity/db_items/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ACCommunity/db_items/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ACCommunity/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ACCommunity/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ACCommunity/static/profile_pics/One.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ACCommunity/templates/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/ACCommunity/templates/account.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ACCommunity/templates/add_villager.html" beforeDir="false" afterPath="$PROJECT_DIR$/ACCommunity/templates/add_villager.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ACCommunity/error_pages/handlers.py" beforeDir="false" afterPath="$PROJECT_DIR$/ACCommunity/error_pages/handlers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ACCommunity/templates/all_villagers.html" beforeDir="false" afterPath="$PROJECT_DIR$/ACCommunity/templates/all_villagers.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ACCommunity/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/ACCommunity/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ACCommunity/templates/edit_villager.html" beforeDir="false" afterPath="$PROJECT_DIR$/ACCommunity/templates/edit_villager.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ACCommunity/templates/villager_info.html" beforeDir="false" afterPath="$PROJECT_DIR$/ACCommunity/templates/villager_info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ACCommunity/turnips/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/ACCommunity/turnips/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ACCommunity/templates/blog_post.html" beforeDir="false" afterPath="$PROJECT_DIR$/ACCommunity/templates/blog_post.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ACCommunity/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/ACCommunity/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ACCommunity/templates/turnip_post.html" beforeDir="false" afterPath="$PROJECT_DIR$/ACCommunity/templates/turnip_post.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ACCommunity/turnips/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ACCommunity/turnips/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ACCommunity/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/ACCommunity/users/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ACCommunity/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ACCommunity/users/views.py" afterDir="false" />
@@ -126,7 +109,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1591068361953</updated>
-      <workItem from="1591068364651" duration="42865000" />
+      <workItem from="1591068364651" duration="46887000" />
     </task>
     <servers />
   </component>
@@ -141,22 +124,22 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="634" y="314" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1792.1120/0.-1440.2560.1440@0.0.1792.1120" timestamp="1591069606109" />
-    <state width="1750" height="301" key="GridCell.Tab.0.bottom" timestamp="1591327533442">
+    <state width="1750" height="176" key="GridCell.Tab.0.bottom" timestamp="1591329368514">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="301" key="GridCell.Tab.0.bottom/0.0.1792.1120/0.-1440.2560.1440@0.0.1792.1120" timestamp="1591327533442" />
-    <state width="1750" height="301" key="GridCell.Tab.0.center" timestamp="1591327533441">
+    <state width="1750" height="176" key="GridCell.Tab.0.bottom/0.0.1792.1120/0.-1440.2560.1440@0.0.1792.1120" timestamp="1591329368514" />
+    <state width="1750" height="176" key="GridCell.Tab.0.center" timestamp="1591329368513">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="301" key="GridCell.Tab.0.center/0.0.1792.1120/0.-1440.2560.1440@0.0.1792.1120" timestamp="1591327533441" />
-    <state width="1750" height="301" key="GridCell.Tab.0.left" timestamp="1591327533440">
+    <state width="1750" height="176" key="GridCell.Tab.0.center/0.0.1792.1120/0.-1440.2560.1440@0.0.1792.1120" timestamp="1591329368513" />
+    <state width="1750" height="176" key="GridCell.Tab.0.left" timestamp="1591329368512">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="301" key="GridCell.Tab.0.left/0.0.1792.1120/0.-1440.2560.1440@0.0.1792.1120" timestamp="1591327533440" />
-    <state width="1750" height="301" key="GridCell.Tab.0.right" timestamp="1591327533441">
+    <state width="1750" height="176" key="GridCell.Tab.0.left/0.0.1792.1120/0.-1440.2560.1440@0.0.1792.1120" timestamp="1591329368512" />
+    <state width="1750" height="176" key="GridCell.Tab.0.right" timestamp="1591329368513">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="301" key="GridCell.Tab.0.right/0.0.1792.1120/0.-1440.2560.1440@0.0.1792.1120" timestamp="1591327533441" />
+    <state width="1750" height="176" key="GridCell.Tab.0.right/0.0.1792.1120/0.-1440.2560.1440@0.0.1792.1120" timestamp="1591329368513" />
     <state width="239" height="457" key="HiddenNamespacesPopup" timestamp="1591326804501">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
@@ -175,6 +158,6 @@
     <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120/0.-1440.2560.1440@0.0.1792.1120" timestamp="1591154414414" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/AnimalCrossingProject$app.coverage" NAME="app Coverage Results" MODIFIED="1591327533434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AnimalCrossingProject$app.coverage" NAME="app Coverage Results" MODIFIED="1591329368505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

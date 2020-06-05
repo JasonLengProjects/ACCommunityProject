@@ -2,7 +2,7 @@
 # 1. add bootstrap styles to register.html
 # 2. add profile image to posts
 # 3. implement queue function for showing island codes
-# 4. create link for showing turnip posts
+# DONE! 4. create link for showing turnip posts
 # 5. make all the html templates which direct to users.user_posts to a separate user page that shows both kinds of posts
 # 6. DONE! fix the update-image issue
 from flask import render_template, url_for, flash, redirect, request, Blueprint
@@ -31,7 +31,7 @@ def register():
         flash("Thanks for your registration!")
         return redirect(url_for("users.login"))
 
-    return render_template("register.html", form=form)
+    return render_template("register.html", form=form, page_title="REGISTER")
 
 
 # login
@@ -53,7 +53,7 @@ def login():
 
             return redirect(next_page)
 
-    return render_template("login.html", form=form)
+    return render_template("login.html", form=form, page_title="LOGIN")
 
 
 # logout
@@ -88,7 +88,7 @@ def account():
 
     profile_image = url_for('static', filename="profile_pics/"+current_user.profile_image)
 
-    return render_template("account.html", profile_image=profile_image, form=form)
+    return render_template("account.html", profile_image=profile_image, form=form, page_title="ACCOUNT")
 
 
 # list of blog posts
@@ -97,7 +97,7 @@ def user_posts(username):
     page = request.args.get("page", 1, type=int)
     user = User.query.filter_by(username=username).first_or_404()
     blog_posts = BlogPost.query.filter_by(author=user).order_by(BlogPost.date.desc()).paginate(page=page, per_page=5)
-    return render_template("user_blog_posts.html", blog_posts=blog_posts, user=user)
+    return render_template("user_blog_posts.html", blog_posts=blog_posts, user=user, page_title=user.username.upper())
 
 
 # list of turnip posts
@@ -106,5 +106,5 @@ def user_turnip_posts(username):
     page = request.args.get("page", 1, type=int)
     user = User.query.filter_by(username=username).first_or_404()
     turnip_posts = TurnipPost.query.filter_by(host=user).order_by(TurnipPost.date.desc()).paginate(page=page, per_page=5)
-    return render_template("user_turnip_posts.html", turnip_posts=turnip_posts, user=user)
+    return render_template("user_turnip_posts.html", turnip_posts=turnip_posts, user=user, page_title=user.username.upper())
 
