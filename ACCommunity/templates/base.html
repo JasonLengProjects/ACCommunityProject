@@ -23,7 +23,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="{{url_for('core.index')}}">
-            <img src="../static/site_pics/home.png" width="30" height="30" class="d-inline-block align-top"
+            <img src="{{url_for('static', filename='site_pics/home.png')}}" width="30" height="30" class="d-inline-block align-top"
                 loading="lazy">
             Home
         </a>
@@ -40,10 +40,10 @@
                     <a class="nav-link" href="{{url_for('blog_posts.all_posts')}}">Forms</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Villagers</a>
+                    <a class="nav-link" href="{{url_for('villagers.all_villagers')}}">Villagers</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Turnips</a>
+                    <a class="nav-link" href="{{url_for('turnip_posts.all_posts')}}">Turnips</a>
                 </li>
 
                 {% if current_user.is_authenticated %}

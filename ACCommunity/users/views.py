@@ -4,6 +4,7 @@
 # 3. implement queue function for showing island codes
 # 4. create link for showing turnip posts
 # 5. make all the html templates which direct to users.user_posts to a separate user page that shows both kinds of posts
+# 6. DONE! fix the update-image issue
 from flask import render_template, url_for, flash, redirect, request, Blueprint
 from flask_login import login_user, current_user, logout_user, login_required
 from ACCommunity import db
@@ -85,7 +86,7 @@ def account():
         form.username.data = current_user.username
         form.email.data = current_user.email
 
-    profile_image = url_for('static', filename="profile_pics"+current_user.profile_image)
+    profile_image = url_for('static', filename="profile_pics/"+current_user.profile_image)
 
     return render_template("account.html", profile_image=profile_image, form=form)
 

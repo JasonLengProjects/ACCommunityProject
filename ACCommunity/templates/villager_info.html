@@ -6,15 +6,49 @@
             <h1>Welcome to the page for {{villager.name}}!</h1>
             <img src="{{ url_for('static', filename='villager_pics/'+villager.image) }}">
         </div>
+
+        <p>Name: {{villager.name}}</p>
+        <br>
+        <p>Personality: {{villager.personality}}</p>
+        <br>
+        <p>Species: {{villager.species}}</p>
+        <br>
+        <p>Birthday: {{villager.birthday}}</p>
+
+        {% if current_user.username == "One_edit" %}
+
+        <div>
+            <a class="btn btn-primary" role="button"
+                href="{{ url_for('villagers.edit_villager', villager_name=villager.name) }}">Edit Villager Info</a>
+            <br>
+            <br>
+            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#del_modal">Delete</button>
+        </div>
+
+        {% endif %}
     </div>
+</div>
 
-    <p>Name: {{villager.name}}</p>
-    <br>
-    <p>Personality: {{villager.personality}}</p>
-    <br>
-    <p>Species: {{villager.species}}</p>
-    <br>
-    <p>Birthday: {{villager.birthday}}</p>
+<div class="modal" tabindex="-1" role="dialog" id="del_modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Delete Villager?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete this villager?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
 
+                <form action="{{ url_for('villagers.delete_villager', villager_name=villager.name) }}" method="POST">
+                    <input class="btn btn-danger" type="submit" id="Delete">
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock content %}

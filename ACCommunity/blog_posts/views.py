@@ -1,8 +1,9 @@
 # To-do
-# 1. DONE? change the redirect of create post view and delete post view to post list view
+# 1. DONE! change the redirect of create post view and delete post view to post list view
 # 2. add pictures to create post view (need to change db model and form)
 # 3. Add titles to templates
-# 4. add profile image next to each post
+# 4. DONE! add profile image next to each post
+# 5. make usernames in posts clickable
 from flask import render_template, redirect, url_for, flash, request, Blueprint
 from flask_login import current_user, login_required
 from ACCommunity import db
@@ -85,7 +86,7 @@ def delete_post(blog_post_id):
 @blog_posts.route("/all")
 def all_posts():
     page = request.args.get("page", 1, type=int)
-    all_posts_found = BlogPost.query.order_by(BlogPost.date.desc()).paginate(page=page, per_page=10)
+    all_posts_found = BlogPost.query.order_by(BlogPost.date.desc()).paginate(page=page, per_page=5)
     return render_template("all_posts.html", all_posts=all_posts_found)
 
 

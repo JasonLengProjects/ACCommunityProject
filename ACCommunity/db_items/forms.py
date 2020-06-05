@@ -1,5 +1,6 @@
 # To-do
 # 1. make some fields in the edit form not required
+from flask import request
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
@@ -31,9 +32,9 @@ class EditVillagerForm(FlaskForm):
 
     submit = SubmitField("Update Villager")
 
-    def validate_name(self, field):
-        if Villager.query.filter_by(name=field.data).first():
-            raise ValidationError("Villager with same name added already!")
+    # def validate_name(self, field):
+    #     if Villager.query.filter_by(name=field.data).first():
+    #         raise ValidationError("Villager with same name added already!")
 
 
 

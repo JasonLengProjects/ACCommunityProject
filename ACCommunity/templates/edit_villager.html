@@ -1,6 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
 
+{% with messages = get_flashed_messages(category_filter=["error"]) %}
+{% if messages %}
+<ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+{% endif %}
+{% endwith %}
+
 <div class="jumbotron">
     <div align="center">
         <h1>Fill out the form below to edit {{villager.name}}'s information</h1>
