@@ -45,7 +45,7 @@ class BlogPost(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)
-    date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    date = db.Column(db.DateTime, nullable=False, default=datetime.now)
     title = db.Column(db.String(140), nullable=False)
     text = db.Column(db.Text, nullable=False)
 
@@ -63,7 +63,7 @@ class TurnipPost(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)  # table name here
-    date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    date = db.Column(db.DateTime, nullable=False, default=datetime.now)
     turnip_price = db.Column(db.Integer, nullable=False)
     text = db.Column(db.Text, nullable=False)
     island_code = db.Column(db.String(64), nullable=False)
