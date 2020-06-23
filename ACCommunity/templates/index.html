@@ -3,7 +3,54 @@
 {% block content %}
 
 <div class="jumbotron">
-    <h1>This is Home Page!</h1>
+    <h1>Welcome to ACCommunity!</h1>
+</div>
+
+<div class="row row-cols-1 row-cols-md-4">
+    <div class="col mb-4">
+        <a href="{{url_for('villagers.all_villagers')}}">
+            <div class="card h-100">
+                <img src="{{ url_for('static', filename='site_pics/villagers.png') }}" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">Villagers</h5>
+                    <p class="card-text">Find your favourite villagers!</p>
+                </div>
+            </div>
+
+        </a>
+    </div>
+    <div class="col mb-4">
+        <a href="{{url_for('blog_posts.all_posts')}}">
+            <div class="card h-100">
+                <img src="{{ url_for('static', filename='site_pics/blogs.jpg') }}" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">Blogs</h5>
+                    <p class="card-text">Wanna share your ACNH experience?</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col mb-4">
+        <a href="{{url_for('turnip_posts.all_posts')}}">
+            <div class="card h-100">
+                <img src="{{ url_for('static', filename='site_pics/turnips.jpg') }}" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">Turnips</h5>
+                    <p class="card-text">Come and find the best trunip price or become a host!</p>
+                </div>
+            </div>
+        </a>
+    </div><div class="col mb-4">
+        <a href="{{url_for('users.account')}}">
+            <div class="card h-100">
+                <img src="{{ url_for('static', filename='site_pics/account.jpg') }}" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">Account</h5>
+                    <p class="card-text">Click here to change your account info.</p>
+                </div>
+            </div>
+        </a>
+    </div>
 </div>
 
 {% endblock content %}

@@ -16,6 +16,16 @@
             <p> {{ post.text }}</p>
         </div>
     </div>
+    <br>
+    <div class="row row-cols-1 row-cols-md-3">
+        {% for image in images %}
+        <div class="col mb-4">
+            <div class="card">
+                <img src="{{ url_for('static', filename='blog_post_pics/'+image.post_image) }}" alt="">
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 
     <br>
 

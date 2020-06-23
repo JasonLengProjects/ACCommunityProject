@@ -41,6 +41,7 @@ class User(db.Model, UserMixin):
 
 
 class BlogPost(db.Model):
+    __tablename__ = "blog_posts"
     users = db.relationship(User)
 
     id = db.Column(db.Integer, primary_key=True)
@@ -48,6 +49,7 @@ class BlogPost(db.Model):
     date = db.Column(db.DateTime, nullable=False, default=datetime.now)
     title = db.Column(db.String(140), nullable=False)
     text = db.Column(db.Text, nullable=False)
+    images = db.relationship("BlogPostImage", backref="owner", lazy=True)
 
     def __init__(self, title, text, user_id):
         self.title = title
@@ -56,6 +58,18 @@ class BlogPost(db.Model):
 
     def __repr__(self):
         return f"Post ID: {self.id} -- Date: {self.date} --- {self.title}"
+
+
+class BlogPostImage(db.Model):
+    blog_posts = db.relationship(BlogPost)
+
+    id = db.Column(db.Integer, primary_key=True)
+    post_image = db.Column(db.String(128))
+    post_id = db.Column(db.Integer, db.ForeignKey("blog_posts.id"), nullable=False)
+
+    def __init__(self, post_image, post_id):
+        self.post_image = post_image
+        self.post_id = post_id
 
 
 class TurnipPost(db.Model):

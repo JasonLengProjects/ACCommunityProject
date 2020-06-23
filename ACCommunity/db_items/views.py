@@ -96,7 +96,7 @@ def delete_villager(villager_name):
 @villagers.route("/all")
 def all_villagers():
     page = request.args.get("page", 1, type=int)
-    all_villagers_found = Villager.query.order_by(Villager.name).paginate(page=page, per_page=5)
+    all_villagers_found = Villager.query.order_by(Villager.name).paginate(page=page, per_page=6)
     return render_template("all_villagers.html", all_villagers=all_villagers_found, page_title="ALL VILLAGERS")
 
 
